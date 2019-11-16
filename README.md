@@ -1,1 +1,1 @@
-This is a gradle project based Java. It contains my daily practice of data structures and algorithms. There are also some TODO left in some files. You can be my guest and can raise a PR by fixing those TODO
+This is a gradle project based on Java. It contains my daily practice of data structures and algorithms. There are also some TODO left in some files. You can be my guest and can raise a PR by fixing those TODO
