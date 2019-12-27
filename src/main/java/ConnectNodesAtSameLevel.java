@@ -6,6 +6,43 @@ public class ConnectNodesAtSameLevel {
     private final static TreeNodeWithExtraPointer DELIMITTER = new TreeNodeWithExtraPointer();
 
     public static void main(String[] args) {
+        TreeNodeWithExtraPointer root = createTreeWithExtraPointer();
+        Queue<TreeNodeWithExtraPointer> siblingsQueue = connect(root);
+    }
+
+    static Queue<TreeNodeWithExtraPointer> connect(TreeNodeWithExtraPointer node) {
+        Queue<TreeNodeWithExtraPointer> siblingsQueue = new LinkedList<>();
+
+        if (node == null) {
+            return siblingsQueue;
+        }
+
+        Queue<TreeNodeWithExtraPointer> queue = new LinkedList<>();
+        queue.add(node);
+        queue.add(DELIMITTER);
+
+        siblingsQueue.add(node);
+        siblingsQueue.add(DELIMITTER);
+
+        while (!queue.isEmpty()) {
+            TreeNodeWithExtraPointer peek = queue.remove();
+
+            if (peek.leftChild != null) {
+                queue.add(peek.leftChild);
+                siblingsQueue.add(peek.leftChild);
+            }
+
+            if (peek.rightChild != null) {
+                queue.add(peek.rightChild);
+                siblingsQueue.add(peek.rightChild);
+            }
+            siblingsQueue.add(DELIMITTER);
+        }
+
+        return siblingsQueue;
+    }
+
+    private static TreeNodeWithExtraPointer createTreeWithExtraPointer() {
         TreeNodeWithExtraPointer fifteen = new TreeNodeWithExtraPointer(15, null, null);
         TreeNodeWithExtraPointer fourteen = new TreeNodeWithExtraPointer(14, null, null);
         TreeNodeWithExtraPointer thirteen = new TreeNodeWithExtraPointer(13, null, null);
@@ -14,40 +51,16 @@ public class ConnectNodesAtSameLevel {
         TreeNodeWithExtraPointer ten = new TreeNodeWithExtraPointer(10, null, null);
         TreeNodeWithExtraPointer nine = new TreeNodeWithExtraPointer(9, null, null);
         TreeNodeWithExtraPointer eight = new TreeNodeWithExtraPointer(8, null, null);
+
         TreeNodeWithExtraPointer seven = new TreeNodeWithExtraPointer(7, fourteen, fifteen);
         TreeNodeWithExtraPointer six = new TreeNodeWithExtraPointer(6, twelve, thirteen);
         TreeNodeWithExtraPointer five = new TreeNodeWithExtraPointer(5, ten, eleven);
         TreeNodeWithExtraPointer four = new TreeNodeWithExtraPointer(4, eight, nine);
+
         TreeNodeWithExtraPointer three = new TreeNodeWithExtraPointer(3, six, seven);
         TreeNodeWithExtraPointer two = new TreeNodeWithExtraPointer(2, four, five);
-        TreeNodeWithExtraPointer root = new TreeNodeWithExtraPointer(1, two, three);
 
-        connect(root);
-    }
-
-    static void connect(TreeNodeWithExtraPointer node) {
-        if (node == null)
-            return;
-
-        Queue<TreeNodeWithExtraPointer> queue = new LinkedList<>();
-        queue.add(node);
-        queue.add(DELIMITTER);
-
-        while (!queue.isEmpty()) {
-            TreeNodeWithExtraPointer peek = queue.remove();
-            TreeNodeWithExtraPointer nextPeek = queue.peek();
-
-            peek.sameLevelSibling = nextPeek;
-
-            if (peek.leftChild != null) {
-                queue.add(peek.leftChild);
-            }
-
-            if (peek.rightChild != null) {
-                queue.add(peek.rightChild);
-            }
-            queue.add(DELIMITTER);
-        }
+        return new TreeNodeWithExtraPointer(1, two, three);
     }
 }
 
