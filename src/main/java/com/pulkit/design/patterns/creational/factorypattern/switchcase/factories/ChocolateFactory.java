@@ -1,9 +1,9 @@
-package com.pulkit.design.patterns.Creational.FactoryPattern.by.switchcase.factories;
+package com.pulkit.design.patterns.creational.factorypattern.switchcase.factories;
 
-import com.pulkit.design.patterns.Creational.FactoryPattern.by.switchcase.constants.ChocolateTypes;
-import com.pulkit.design.patterns.Creational.FactoryPattern.by.switchcase.models.Chocolate;
-import com.pulkit.design.patterns.Creational.FactoryPattern.by.switchcase.models.DairyMilk;
-import com.pulkit.design.patterns.Creational.FactoryPattern.by.switchcase.models.Kitkat;
+import com.pulkit.design.patterns.creational.factorypattern.switchcase.constants.ChocolateTypes;
+import com.pulkit.design.patterns.creational.factorypattern.switchcase.models.Chocolate;
+import com.pulkit.design.patterns.creational.factorypattern.switchcase.models.DairyMilk;
+import com.pulkit.design.patterns.creational.factorypattern.switchcase.models.Kitkat;
 
 public class ChocolateFactory {
 

@@ -1,4 +1,4 @@
-package com.pulkit.design.patterns.Creational.FactoryPattern.by.switchcase.constants;
+package com.pulkit.design.patterns.creational.factorypattern.switchcase.constants;
 
 public enum ChocolateTypes {
     KITKAT, DAIRYMILK

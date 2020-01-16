@@ -1,6 +1,6 @@
-package com.pulkit.design.patterns.Creational.FactoryPattern.by.polymorphism.factories;
+package com.pulkit.design.patterns.creational.factorypattern.polymorphism.factories;
 
-import com.pulkit.design.patterns.Creational.FactoryPattern.by.polymorphism.models.Chocolate;
+import com.pulkit.design.patterns.creational.factorypattern.polymorphism.models.Chocolate;
 
 public interface ChocolateFactory {
     Chocolate createChocolate();
