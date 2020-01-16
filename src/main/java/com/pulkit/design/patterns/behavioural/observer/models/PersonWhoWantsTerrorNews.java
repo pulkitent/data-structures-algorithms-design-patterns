@@ -1,4 +1,4 @@
-package com.pulkit.design.patterns.Behavioural.Observer.models;
+package com.pulkit.design.patterns.behavioural.observer.models;
 
 public class PersonWhoWantsTerrorNews implements Person {
     String name;
