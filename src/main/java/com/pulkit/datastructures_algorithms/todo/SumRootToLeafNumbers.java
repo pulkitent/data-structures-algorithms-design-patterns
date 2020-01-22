@@ -38,25 +38,24 @@ public class SumRootToLeafNumbers {
     static Set<String> map = new HashSet<>();
 
     public static void main(String[] args) {
-//        com.pulkit.DsAlgo.TreeNodee fifteen = new com.pulkit.DsAlgo.TreeNodee(15, null, null);
-//        com.pulkit.DsAlgo.TreeNodee fourteen = new com.pulkit.DsAlgo.TreeNodee(14, null, null);
-//        com.pulkit.DsAlgo.TreeNodee thirteen = new com.pulkit.DsAlgo.TreeNodee(13, null, null);
-//        com.pulkit.DsAlgo.TreeNodee twelve = new com.pulkit.DsAlgo.TreeNodee(12, null, null);
-//        com.pulkit.DsAlgo.TreeNodee eleven = new com.pulkit.DsAlgo.TreeNodee(11, null, null);
-//        com.pulkit.DsAlgo.TreeNodee ten = new com.pulkit.DsAlgo.TreeNodee(10, null, null);
-//        com.pulkit.DsAlgo.TreeNodee nine = new com.pulkit.DsAlgo.TreeNodee(9, null, null);
-//        com.pulkit.DsAlgo.TreeNodee eight = new com.pulkit.DsAlgo.TreeNodee(8, null, null);
-//        com.pulkit.DsAlgo.TreeNodee seven = new com.pulkit.DsAlgo.TreeNodee(7, fourteen, fifteen);
-//        com.pulkit.DsAlgo.TreeNodee six = new com.pulkit.DsAlgo.TreeNodee(6, twelve, thirteen);
-//        com.pulkit.DsAlgo.TreeNodee five = new com.pulkit.DsAlgo.TreeNodee(5, ten, eleven);
-//        com.pulkit.DsAlgo.TreeNodee four = new com.pulkit.DsAlgo.TreeNodee(4, eight, nine);
-//        com.pulkit.DsAlgo.TreeNodee three = new com.pulkit.DsAlgo.TreeNodee(3, six, seven);
-//        com.pulkit.DsAlgo.TreeNodee two = new com.pulkit.DsAlgo.TreeNodee(2, four, five);
-//        com.pulkit.DsAlgo.TreeNodee root = new com.pulkit.DsAlgo.TreeNodee(1, two, three);
-
-//        com.pulkit.DsAlgo.TreeNodee three = new com.pulkit.DsAlgo.TreeNodee("3", null, null);
-//        com.pulkit.DsAlgo.TreeNodee two = new com.pulkit.DsAlgo.TreeNodee("2", null, null);
-//        com.pulkit.DsAlgo.TreeNodee root = new com.pulkit.DsAlgo.TreeNodee("1", two, three);
+//        TreeNodee fifteen = new TreeNodee(15, null, null);
+//        TreeNodee fourteen = new TreeNodee(14, null, null);
+//        TreeNodee thirteen = new TreeNodee(13, null, null);
+//        TreeNodee twelve = new TreeNodee(12, null, null);
+//        TreeNodee eleven = new TreeNodee(11, null, null);
+//        TreeNodee ten = new TreeNodee(10, null, null);
+//        TreeNodee nine = new TreeNodee(9, null, null);
+//        TreeNodee eight = new TreeNodee(8, null, null);
+//        TreeNodee seven = new TreeNodee(7, fourteen, fifteen);
+//        TreeNodee six = new TreeNodee(6, twelve, thirteen);
+//        TreeNodee five = new TreeNodee(5, ten, eleven);
+//        TreeNodee four = new TreeNodee(4, eight, nine);
+//        TreeNodee three = new TreeNodee(3, six, seven);
+//        TreeNodee two = new TreeNodee(2, four, five);
+//        TreeNodee root = new TreeNodee(1, two, three);
+//        TreeNodee three = new TreeNodee("3", null, null);
+//        TreeNodee two = new TreeNodee("2", null, null);
+//        TreeNodee root = new TreeNodee("1", two, three);
 
         TreeNodee seven = new TreeNodee(7, null, null);
         TreeNodee six = new TreeNodee(6, null, null);
