@@ -11,16 +11,23 @@ public class FirstNonRepeatingCharacterInStream {
     public static void main(String[] args) {
         FirstNonRepeatingCharacterInStream client = new FirstNonRepeatingCharacterInStream();
 
-        //Expected Output - 1 1 1 1 1 1 1 1
+        //Expected Output : 1 1 1 1 1 1 1 1
         //int stream[] = {1, 2, 3, 4, 5, 6, 7, 9};
 
-        //Expected Output - 1 1 1 1 1 1 1 4
+        //Expected Output : 1 1 1 1 1 1 1 4
         //int stream[] = {1, 2, 3, 4, 3, 6, 2, 1};
 
-        //TODO: Fix it
-        int stream[] = {1, 1, 3, 3, 3, 6, 6, 7};
-        //TODO: Fix it
+        //Expected Output : 1 1 2 2 2 -1 6 6
         //int stream[] = {1, 2, 1, 3, 3, 2, 6, 7};
+
+        //Expected Output : 1 1 2 2 2 -1 6 6 7
+        //int stream[] = {1, 2, 1, 3, 3, 2, 6, 7, 6};
+
+        //Expected Output : 1 -1 3 -1 -1 6 -1 7
+        //int stream[] = {1, 1, 3, 3, 3, 6, 6, 7};
+
+        //Expected Output : 1 -1 3 -1 6 -1 7
+        int stream[] = {1, 1, 3, 3, 6, 6, 7};
 
         for (Integer element : stream) {
             System.out.print(client.find(element) + " ");
@@ -28,7 +35,11 @@ public class FirstNonRepeatingCharacterInStream {
     }
 
     private Integer find(int streamElement) {
-        if (head == null) {
+        if (head == null && last == null) {
+            if (map.containsKey(streamElement)) {
+                return -1;
+            }
+
             head = new DoublyLinkedListNode<>(streamElement);
             last = head;
 
@@ -38,6 +49,12 @@ public class FirstNonRepeatingCharacterInStream {
 
         if (map.containsKey(streamElement)) {
             DoublyLinkedListNode<Integer> streamElementNodeInDLL = map.get(streamElement);
+
+            if (streamElementNodeInDLL == last && streamElementNodeInDLL == head) {
+                last = null;
+                head = null;
+                return -1;
+            }
 
             DoublyLinkedListNode<Integer> previousNode = streamElementNodeInDLL.previous;
             DoublyLinkedListNode<Integer> nextNode = streamElementNodeInDLL.next;
