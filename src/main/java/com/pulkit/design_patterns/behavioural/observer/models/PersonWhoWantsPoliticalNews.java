@@ -1,0 +1,13 @@
+package com.pulkit.design_patterns.behavioural.observer.models;
+
+public class PersonWhoWantsPoliticalNews implements Person {
+    String name;
+
+    public PersonWhoWantsPoliticalNews(String name) {
+        this.name = name;
+    }
+
+    public void giveNews(String news) {
+        System.out.println("Latest News is " + news);
+    }
+}
