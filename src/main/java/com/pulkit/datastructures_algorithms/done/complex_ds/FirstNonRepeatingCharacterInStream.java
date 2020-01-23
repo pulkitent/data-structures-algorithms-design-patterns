@@ -1,4 +1,4 @@
-package com.pulkit.datastructures_algorithms.done;
+package com.pulkit.datastructures_algorithms.done.complex_ds;
 
 import java.util.HashMap;
 import java.util.Map;
