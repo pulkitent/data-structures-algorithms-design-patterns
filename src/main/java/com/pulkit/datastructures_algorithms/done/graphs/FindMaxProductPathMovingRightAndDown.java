@@ -1,4 +1,4 @@
-package com.pulkit.datastructures_algorithms.done.trees;//Matrix Example
+package com.pulkit.datastructures_algorithms.done.graphs;//Matrix Example
 /*
     00 01 02
 
