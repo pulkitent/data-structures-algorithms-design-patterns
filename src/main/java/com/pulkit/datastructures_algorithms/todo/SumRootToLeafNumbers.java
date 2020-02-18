@@ -103,7 +103,7 @@ class TreeNodee {
     TreeNodee leftChild;
     TreeNodee rightChild;
 
-    TreeNodee(Integer data, TreeNodee leftChild, TreeNodee rightChild) {
+    public TreeNodee(Integer data, TreeNodee leftChild, TreeNodee rightChild) {
         this.data = data;
         this.leftChild = leftChild;
         this.rightChild = rightChild;

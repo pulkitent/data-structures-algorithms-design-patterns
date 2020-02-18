@@ -84,7 +84,7 @@ class Pair {
 
     @Override
     public String toString() {
-        return "com.pulkit.DsAlgo.Pair{" +
+        return "Pair{" +
                 "start=" + start +
                 ", end=" + end +
                 '}';

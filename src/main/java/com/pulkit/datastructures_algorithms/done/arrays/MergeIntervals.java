@@ -11,26 +11,26 @@ public class MergeIntervals {
                 new Interval(6, 8));
 
         //Another Test case
-        //com.pulkit.DsAlgo.Interval interval1 = new com.pulkit.DsAlgo.Interval(1, 5);
-        //List<com.pulkit.DsAlgo.Interval> intervals = Arrays.asList(interval1, new com.pulkit.DsAlgo.Interval(3, 7), new com.pulkit.DsAlgo.Interval(6, 8),
-        // new com.pulkit.DsAlgo.Interval(10, 12), new com.pulkit.DsAlgo.Interval(11, 15));
+        //Interval interval1 = new Interval(1, 5);
+        //List<Interval> intervals = Arrays.asList(interval1, new Interval(3, 7), new Interval(6, 8),
+        // new Interval(10, 12), new Interval(11, 15));
 
         //Another Test case
-        //com.pulkit.DsAlgo.Interval interval1 = new com.pulkit.DsAlgo.Interval(2, 10);
-        //com.pulkit.DsAlgo.Interval interval2 = new com.pulkit.DsAlgo.Interval(4, 12);
-        //com.pulkit.DsAlgo.Interval interval3 = new com.pulkit.DsAlgo.Interval(13, 16);
-        //com.pulkit.DsAlgo.Interval interval4 = new com.pulkit.DsAlgo.Interval(19, 20);
-        //com.pulkit.DsAlgo.Interval pair5 = new com.pulkit.DsAlgo.Interval(20, 24);
-        //List<com.pulkit.DsAlgo.Interval> intervals = Arrays.asList(interval1, interval2, interval3, interval4, pair5);
+        //Interval interval1 = new Interval(2, 10);
+        //Interval interval2 = new Interval(4, 12);
+        //Interval interval3 = new Interval(13, 16);
+        //Interval interval4 = new Interval(19, 20);
+        //Interval pair5 = new Interval(20, 24);
+        //List<Interval> intervals = Arrays.asList(interval1, interval2, interval3, interval4, pair5);
 
         //Another Test case
-        //com.pulkit.DsAlgo.Interval interval1 = new com.pulkit.DsAlgo.Interval(1, 10);
-        //com.pulkit.DsAlgo.Interval interval2 = new com.pulkit.DsAlgo.Interval(2, 9);
-        //com.pulkit.DsAlgo.Interval interval3 = new com.pulkit.DsAlgo.Interval(3, 8);
-        //com.pulkit.DsAlgo.Interval interval4 = new com.pulkit.DsAlgo.Interval(4, 7);
-        //com.pulkit.DsAlgo.Interval interval5 = new com.pulkit.DsAlgo.Interval(5, 6);
-        //com.pulkit.DsAlgo.Interval interval6 = new com.pulkit.DsAlgo.Interval(6, 6);
-        //List<com.pulkit.DsAlgo.Interval> intervals = Arrays.asList(interval1, interval2, interval3, interval4, interval5, interval6);
+        //Interval interval1 = new Interval(1, 10);
+        //Interval interval2 = new Interval(2, 9);
+        //Interval interval3 = new Interval(3, 8);
+        //Interval interval4 = new Interval(4, 7);
+        //Interval interval5 = new Interval(5, 6);
+        //Interval interval6 = new Interval(6, 6);
+        //List<Interval> intervals = Arrays.asList(interval1, interval2, interval3, interval4, interval5, interval6);
 
         intervals.sort(new IntervalComparator());
         ArrayList mergedList = new ArrayList();

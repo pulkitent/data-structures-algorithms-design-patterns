@@ -9,13 +9,13 @@ public class ImplementOddEvenMerge {
     public static void main(String[] args) {
         //Another Test case
         /*
-        com.pulkit.DsAlgo.Node list = new com.pulkit.DsAlgo.Node(0,
-                new com.pulkit.DsAlgo.Node(1,
-                        new com.pulkit.DsAlgo.Node(2,
-                                new com.pulkit.DsAlgo.Node(3,
-                                        new com.pulkit.DsAlgo.Node(4,
-                                                new com.pulkit.DsAlgo.Node(5,
-                                                        new com.pulkit.DsAlgo.Node(6,
+        Node list = new Node(0,
+                new Node(1,
+                        new Node(2,
+                                new Node(3,
+                                        new Node(4,
+                                                new Node(5,
+                                                        new Node(6,
                                                                 null)))))));
         */
 

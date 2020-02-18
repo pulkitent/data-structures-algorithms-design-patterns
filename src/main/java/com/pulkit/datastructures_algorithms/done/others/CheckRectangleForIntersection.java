@@ -33,34 +33,34 @@ public class CheckRectangleForIntersection {
         int F = scanner.nextInt();
         int G = scanner.nextInt();
         int H = scanner.nextInt();
-        com.pulkit.DsAlgo.Rectangle firstRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(A, B), new com.pulkit.DsAlgo.Coordinate(C, D));
-        com.pulkit.DsAlgo.Rectangle secondRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(E, F), new com.pulkit.DsAlgo.Coordinate(G, H));
+        Rectangle firstRectangle = new Rectangle(new Coordinate(A, B), new Coordinate(C, D));
+        Rectangle secondRectangle = new Rectangle(new Coordinate(E, F), new Coordinate(G, H));
         */
 
         //Another Test case
         //Expected No
-        //com.pulkit.DsAlgo.Rectangle firstRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(1, 6), new com.pulkit.DsAlgo.Coordinate(2, 8));
-        //com.pulkit.DsAlgo.Rectangle secondRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(3, 2), new com.pulkit.DsAlgo.Coordinate(5, 3));
+        //Rectangle firstRectangle = new Rectangle(new Coordinate(1, 6), new Coordinate(2, 8));
+        //Rectangle secondRectangle = new Rectangle(new Coordinate(3, 2), new Coordinate(5, 3));
 
         //Another Test case
         //Expected Yes
-        //com.pulkit.DsAlgo.Rectangle firstRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(1, 3), new com.pulkit.DsAlgo.Coordinate(4, 5));
-        //com.pulkit.DsAlgo.Rectangle secondRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(3, 2), new com.pulkit.DsAlgo.Coordinate(5, 4));
+        //Rectangle firstRectangle = new Rectangle(new Coordinate(1, 3), new Coordinate(4, 5));
+        //Rectangle secondRectangle = new Rectangle(new Coordinate(3, 2), new Coordinate(5, 4));
 
         //Another Test case
         //Expected Yes
-        //com.pulkit.DsAlgo.Rectangle firstRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(1, 3), new com.pulkit.DsAlgo.Coordinate(3, 6));
-        //com.pulkit.DsAlgo.Rectangle secondRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(1, 1), new com.pulkit.DsAlgo.Coordinate(3, 4));
+        //Rectangle firstRectangle = new Rectangle(new Coordinate(1, 3), new Coordinate(3, 6));
+        //Rectangle secondRectangle = new Rectangle(new Coordinate(1, 1), new Coordinate(3, 4));
 
         //Another Test case
         //Expected Yes
-        //com.pulkit.DsAlgo.Rectangle firstRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(1, 1), new com.pulkit.DsAlgo.Coordinate(5, 5));
-        //com.pulkit.DsAlgo.Rectangle secondRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(3, 3), new com.pulkit.DsAlgo.Coordinate(7, 7));
+        //Rectangle firstRectangle = new Rectangle(new Coordinate(1, 1), new Coordinate(5, 5));
+        //Rectangle secondRectangle = new Rectangle(new Coordinate(3, 3), new Coordinate(7, 7));
 
         //Another Test case
         //Expected No
-        //com.pulkit.DsAlgo.Rectangle firstRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(1, 1), new com.pulkit.DsAlgo.Coordinate(3, 3));
-        //com.pulkit.DsAlgo.Rectangle secondRectangle = new com.pulkit.DsAlgo.Rectangle(new com.pulkit.DsAlgo.Coordinate(5, 5), new com.pulkit.DsAlgo.Coordinate(7, 7));
+        //Rectangle firstRectangle = new Rectangle(new Coordinate(1, 1), new Coordinate(3, 3));
+        //Rectangle secondRectangle = new Rectangle(new Coordinate(5, 5), new Coordinate(7, 7));
 
         //Expected No
         Rectangle firstRectangle = new Rectangle(new Coordinate(47, 10), new Coordinate(57, 73));

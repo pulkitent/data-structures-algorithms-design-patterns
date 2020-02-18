@@ -33,21 +33,21 @@ public class AllRootToLeafPathsSum {
 
         /* First test case data
 
-        com.pulkit.DsAlgo.TreeNode fifteen = new com.pulkit.DsAlgo.TreeNode(15, null, null);
-        com.pulkit.DsAlgo.TreeNode fourteen = new com.pulkit.DsAlgo.TreeNode(14, null, null);
-        com.pulkit.DsAlgo.TreeNode thirteen = new com.pulkit.DsAlgo.TreeNode(13, null, null);
-        com.pulkit.DsAlgo.TreeNode twelve = new com.pulkit.DsAlgo.TreeNode(12, null, null);
-        com.pulkit.DsAlgo.TreeNode eleven = new com.pulkit.DsAlgo.TreeNode(11, null, null);
-        com.pulkit.DsAlgo.TreeNode ten = new com.pulkit.DsAlgo.TreeNode(10, null, null);
-        com.pulkit.DsAlgo.TreeNode nine = new com.pulkit.DsAlgo.TreeNode(9, null, null);
-        com.pulkit.DsAlgo.TreeNode eight = new com.pulkit.DsAlgo.TreeNode(8, null, null);
-        com.pulkit.DsAlgo.TreeNode seven = new com.pulkit.DsAlgo.TreeNode(7, fourteen, fifteen);
-        com.pulkit.DsAlgo.TreeNode six = new com.pulkit.DsAlgo.TreeNode(6, twelve, thirteen);
-        com.pulkit.DsAlgo.TreeNode five = new com.pulkit.DsAlgo.TreeNode(5, ten, eleven);
-        com.pulkit.DsAlgo.TreeNode four = new com.pulkit.DsAlgo.TreeNode(4, eight, nine);
-        com.pulkit.DsAlgo.TreeNode three = new com.pulkit.DsAlgo.TreeNode(3, six, seven);
-        com.pulkit.DsAlgo.TreeNode two = new com.pulkit.DsAlgo.TreeNode(2, four, five);
-        com.pulkit.DsAlgo.TreeNode root = new com.pulkit.DsAlgo.TreeNode(1, two, three);
+        TreeNode fifteen = new TreeNode(15, null, null);
+        TreeNode fourteen = new TreeNode(14, null, null);
+        TreeNode thirteen = new TreeNode(13, null, null);
+        TreeNode twelve = new TreeNode(12, null, null);
+        TreeNode eleven = new TreeNode(11, null, null);
+        TreeNode ten = new TreeNode(10, null, null);
+        TreeNode nine = new TreeNode(9, null, null);
+        TreeNode eight = new TreeNode(8, null, null);
+        TreeNode seven = new TreeNode(7, fourteen, fifteen);
+        TreeNode six = new TreeNode(6, twelve, thirteen);
+        TreeNode five = new TreeNode(5, ten, eleven);
+        TreeNode four = new TreeNode(4, eight, nine);
+        TreeNode three = new TreeNode(3, six, seven);
+        TreeNode two = new TreeNode(2, four, five);
+        TreeNode root = new TreeNode(1, two, three);
         */
 
         //Another test case data

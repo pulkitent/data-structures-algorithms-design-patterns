@@ -3,13 +3,13 @@ package com.pulkit.datastructures_algorithms.done.arrays;
 public class SubArrayWithGivenSum {
     public static void main(String[] args) {
         //Test Case 1
-        //Expected Output - com.pulkit.DsAlgo.Pair{start=1, end=3}
+        //Expected Output - Pair{start=1, end=3}
         int input1[] = {1, 2, 3, 7, 5};
         int givenSum1 = 12;
         System.out.println(find(input1, givenSum1));
 
         //Test Case 2
-        //Expected Output - com.pulkit.DsAlgo.Pair{start=0, end=4}
+        //Expected Output - Pair{start=0, end=4}
         int input2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int givenSum2 = 15;
         System.out.println(find(input2, givenSum2));

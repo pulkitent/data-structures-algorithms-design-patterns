@@ -17,7 +17,7 @@ public class LeftViewOfBinaryTree {
         TreeNode root = createBinaryTree();
 
         //Expected Output - 1 2 5 11
-        //com.pulkit.DsAlgo.TreeNode root = createSpecificBinaryTree();
+        //TreeNode root = createSpecificBinaryTree();
 
         computeLeftView(root, levelTreeMap, 0);
         printLeftView(levelTreeMap);

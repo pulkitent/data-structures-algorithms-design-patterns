@@ -7,7 +7,7 @@ import java.util.List;
 public class FindNumberOfConnectedComponents {
     public static void main(String[] args) {
         //Another Test case : Expected Output - 3
-        //List<com.pulkit.DsAlgo.GraphNode> allNodesList = createGraphWithThreeConnectedComponents();
+        //List<GraphNode> allNodesList = createGraphWithThreeConnectedComponents();
 
         //Another Test case : Expected Output - 1
         List<GraphNode> allNodesList = createGraphWithOneConnectedComponents();

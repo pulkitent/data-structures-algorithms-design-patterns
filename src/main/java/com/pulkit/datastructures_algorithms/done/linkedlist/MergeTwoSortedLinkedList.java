@@ -10,8 +10,8 @@ package com.pulkit.datastructures_algorithms.done.linkedlist;
 public class MergeTwoSortedLinkedList {
     public static void main(String[] args) {
         //Another Test case
-        //com.pulkit.DsAlgo.Node firstList = new com.pulkit.DsAlgo.Node(2, new com.pulkit.DsAlgo.Node(5, new com.pulkit.DsAlgo.Node(11, null)));
-        //com.pulkit.DsAlgo.Node secondList = new com.pulkit.DsAlgo.Node(4, new com.pulkit.DsAlgo.Node(7, null));
+        //Node firstList = new Node(2, new Node(5, new Node(11, null)));
+        //Node secondList = new Node(4, new Node(7, null));
 
         Node firstList = new Node(2, new Node(5, new Node(11, new Node(15,
                 new Node(19, null)))));

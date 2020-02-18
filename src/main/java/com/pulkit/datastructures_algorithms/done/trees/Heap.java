@@ -1,7 +1,7 @@
 package com.pulkit.datastructures_algorithms.done.trees;
 
 public class Heap {
-//com.pulkit.DsAlgo.Heap Example
+//Heap Example
     /*
 
           10
