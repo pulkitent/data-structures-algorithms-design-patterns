@@ -1,6 +1,7 @@
 package com.pulkit.datastructures_algorithms.done.trees;
 
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 
 //TODO: To be fixed
@@ -10,6 +11,9 @@ public class ConnectNodesAtSameLevel {
     public static void main(String[] args) {
         TreeNodeWithExtraPointer root = createTreeWithExtraPointer();
         Queue<TreeNodeWithExtraPointer> siblingsQueue = connect(root);
+
+        TreeNodeWithExtraPointer anotherRoot = createTreeWithExtraPointer();
+        connectV2(anotherRoot);
     }
 
     static Queue<TreeNodeWithExtraPointer> connect(TreeNodeWithExtraPointer node) {
@@ -44,6 +48,42 @@ public class ConnectNodesAtSameLevel {
         return siblingsQueue;
     }
 
+    static void connectV2(TreeNodeWithExtraPointer node) {
+        if (node == null)
+            return;
+
+        Queue<TreeNodeWithExtraPointer> queue = new LinkedList<>();
+        queue.add(node);
+        queue.add(DELIMITTER);
+
+        TreeNodeWithExtraPointer previous = null;
+        TreeNodeWithExtraPointer current = null;
+
+        while (!queue.isEmpty()) {
+            TreeNodeWithExtraPointer peek = queue.remove();
+            current = peek;
+            if (!peek.equals(DELIMITTER)) {
+                if (previous != null) {
+                    previous.sameLevelSibling = current;
+                }
+                if (peek.leftChild != null) {
+                    TreeNodeWithExtraPointer leftChild = peek.leftChild;
+                    queue.add(leftChild);
+                }
+                if (peek.rightChild != null) {
+                    TreeNodeWithExtraPointer rightChild = peek.rightChild;
+                    queue.add(rightChild);
+                }
+                previous = current;
+            } else {
+                if (!queue.isEmpty()) {
+                    queue.add(DELIMITTER);
+                }
+                previous = null;
+            }
+        }
+    }
+
     private static TreeNodeWithExtraPointer createTreeWithExtraPointer() {
         TreeNodeWithExtraPointer fifteen = new TreeNodeWithExtraPointer(15, null, null);
         TreeNodeWithExtraPointer fourteen = new TreeNodeWithExtraPointer(14, null, null);
@@ -67,7 +107,7 @@ public class ConnectNodesAtSameLevel {
 }
 
 class TreeNodeWithExtraPointer {
-    public int data;
+    public Integer data;
     public TreeNodeWithExtraPointer leftChild;
     public TreeNodeWithExtraPointer rightChild;
     public TreeNodeWithExtraPointer sameLevelSibling;
@@ -80,5 +120,26 @@ class TreeNodeWithExtraPointer {
     }
 
     TreeNodeWithExtraPointer() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TreeNodeWithExtraPointer that = (TreeNodeWithExtraPointer) o;
+        return data == that.data &&
+                leftChild.equals(that.leftChild) &&
+                rightChild.equals(that.rightChild) &&
+                sameLevelSibling.equals(that.sameLevelSibling);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(data, leftChild, rightChild, sameLevelSibling);
+    }
+
+    @Override
+    public String toString() {
+        return "data = " + data;
     }
 }

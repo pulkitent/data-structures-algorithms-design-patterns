@@ -44,8 +44,8 @@ public class NStackUsingArray {
 
         //TODO: Need to implement pop correctly
         Integer pop(int stackNumber) {
-            return stackArray[stacksHead[stackNumber]];
             stacksHead[stackNumber]--;
+            return stackArray[stacksHead[stackNumber]];
         }
 
         private void pushElement(int currentStackNumber, int element) {
