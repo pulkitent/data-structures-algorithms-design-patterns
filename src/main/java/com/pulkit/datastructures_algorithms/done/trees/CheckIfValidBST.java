@@ -1,12 +1,17 @@
 package com.pulkit.datastructures_algorithms.done.trees;
 
+
+//TODO: Optimize it more, no need for too much recursuve calls
 public class CheckIfValidBST {
     public static void main(String[] args) {
         TreeNode root = createBST();
         System.out.println(isValidBST(root));
+
+        TreeNode anotherRoot = createBST();
+        System.out.println(isValidBSTV2(anotherRoot, null, null));
     }
 
-    public static boolean isValidBST(TreeNode node) {
+    static boolean isValidBST(TreeNode node) {
         if (node == null)
             return true;
 
@@ -47,6 +52,29 @@ public class CheckIfValidBST {
         Integer maxInRightSubtree = findMax(node.rightChild);
 
         return Math.max(node.data, Math.max(maxInLeftSubtree, maxInRightSubtree));
+    }
+
+    static boolean isValidBSTV2(TreeNode node, Integer max, Integer min) {
+        if (node == null) {
+            return true;
+        }
+
+        if ((max != null && node.data > max) || (min != null && node.data < min)) {
+            return false;
+        }
+
+        boolean isLeftSubtreeValid = isValidBSTV2(node.leftChild, node.data, min);
+        boolean isRightSubtreeValid = isValidBSTV2(node.rightChild, max, node.data);
+
+        if (!isLeftSubtreeValid || !isRightSubtreeValid) {
+            return false;
+        }
+        return true;
+
+        /*
+        simplified version
+        return isLeftSubtreeValid && isRightSubtreeValid;
+         */
     }
 
     public static TreeNode createBST() {
