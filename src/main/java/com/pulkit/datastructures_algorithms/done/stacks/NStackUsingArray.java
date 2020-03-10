@@ -22,6 +22,7 @@ public class NStackUsingArray {
         }
 
         //TODO: Need to handle some edge cases also
+        //TODO: Also handle case for last stack is full and first stack is empty ie rolling push
         void push(int currentStackNumber, int element) {
             int nextStackNumber = currentStackNumber + 1;
 
