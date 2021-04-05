@@ -1,0 +1,2022 @@
+From 5271b0b06a74cd82da2715bca006c9431ab45447 Mon Sep 17 00:00:00 2001
+From: Pulkit Gupta-GGN <Pulkit_Gupta-GGN@external.mckinsey.com>
+Date: Mon, 5 Apr 2021 13:53:50 +0530
+Subject: [PATCH] Work in progress
+
+---
+ .DS_Store                                     | Bin 6148 -> 8196 bytes
+ .../done/arrays/HotelBookingPossible.java     |   6 +-
+ .../done/dp/CoinChangingProblem.java          |  37 +++
+ .../done/dp/Knapsack.java                     |  75 ++++++
+ .../done/graphs/ShortestPathBetweenNodes.java |   7 +
+ .../done/stacks/NStackUsage.java              |  41 ++++
+ .../done/trees/LongestConsecutiveBranch.java  |  20 ++
+ ...ncludingNonRootAndNonLeafWithGivenSum.java |  94 ++++++++
+ .../todo/DeleteANodeFromBinaryTree.java       |   7 +
+ src/main/java/com/pulkit/jyoti/GraphNode.java | 137 +++++++++++
+ to be committed/BoxStackingProblem.java       |  46 ++++
+ to be committed/ConnectNodesAtSameLevel.java  | 181 ++++++++++++++
+ to be committed/CuttingARod.java              |  65 +++++
+ .../FlattenBinaryTreeToSinglyLinkedList.java  |  86 +++++++
+ to be committed/GenerateParentheses.java      |  25 ++
+ to be committed/HouseThief.java               |  25 ++
+ to be committed/KeyPadProblem.java            |  51 ++++
+ to be committed/KeyPadProblemm.java           |  59 +++++
+ to be committed/KnapsackProblem.java          | 224 ++++++++++++++++++
+ to be committed/Permutation.java              |  43 ++++
+ to be committed/PriorityQueueTrial.java       |  14 ++
+ to be committed/RottenTomatoes.java           |  27 +++
+ to be committed/SearchSystem.java             |  88 +++++++
+ to be committed/SkyLineProblem.java           |  70 ++++++
+ to be committed/SubSetSumProblem.java         | 129 ++++++++++
+ to be committed/Subset.java                   |  39 +++
+ to be committed/Subtree.java                  |  49 ++++
+ to be committed/WordLadderII.java             | 106 +++++++++
+ 28 files changed, 1748 insertions(+), 3 deletions(-)
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/done/dp/CoinChangingProblem.java
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/done/dp/Knapsack.java
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/done/graphs/ShortestPathBetweenNodes.java
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/done/stacks/NStackUsage.java
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/done/trees/LongestConsecutiveBranch.java
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/done/trees/PathsIncludingNonRootAndNonLeafWithGivenSum.java
+ create mode 100644 src/main/java/com/pulkit/datastructures_algorithms/todo/DeleteANodeFromBinaryTree.java
+ create mode 100644 src/main/java/com/pulkit/jyoti/GraphNode.java
+ create mode 100644 to be committed/BoxStackingProblem.java
+ create mode 100644 to be committed/ConnectNodesAtSameLevel.java
+ create mode 100644 to be committed/CuttingARod.java
+ create mode 100644 to be committed/FlattenBinaryTreeToSinglyLinkedList.java
+ create mode 100644 to be committed/GenerateParentheses.java
+ create mode 100644 to be committed/HouseThief.java
+ create mode 100644 to be committed/KeyPadProblem.java
+ create mode 100644 to be committed/KeyPadProblemm.java
+ create mode 100644 to be committed/KnapsackProblem.java
+ create mode 100644 to be committed/Permutation.java
+ create mode 100644 to be committed/PriorityQueueTrial.java
+ create mode 100644 to be committed/RottenTomatoes.java
+ create mode 100644 to be committed/SearchSystem.java
+ create mode 100644 to be committed/SkyLineProblem.java
+ create mode 100644 to be committed/SubSetSumProblem.java
+ create mode 100644 to be committed/Subset.java
+ create mode 100644 to be committed/Subtree.java
+ create mode 100644 to be committed/WordLadderII.java
+
+diff --git a/.DS_Store b/.DS_Store
+index bfe60e09190098dd3a2b121aa3f3627b9cef99b0..c8d01059bbb6ab0ddf8ab55cdb9b59f0296a8d03 100644
+GIT binary patch
+delta 479
+zcmZoMXmOBWU|?W$DortDU;r^WfEYvza8E20o2aMAD7Z0TH}hr%jz7$c**Q2SHn1=X
+zPUd0xx>=pIn=zK3p@boyL4hHOAr(j_1KGJim<bdu0g9w}=Hw?Q<>V)U%mdoO2E^X~
+z!2l@2z(7Fv<Rh&8%*G~Wlf&5D>ItaLNjD5m&d)6Xn+qWb=*Z1?ae=yxBj2E9t4ir1
+zN8E0zhj}SCKZOKsFkJ;1q&lxGxF|0tKQA5VBt}LChRr8LY?voD@CY(PJSV{oq+LPL
+ev{{hjJM(0I5zoo~JRBTArJxvO*c{I@hZz7L$Ydk{
+
+delta 136
+zcmZp1XfcprU|?W$DortDU=RQ@Ie-{Mvv5r;6q~50$jH4hU^g=(_hcS{uhPs6`3$8D
+zC7wC?$w@i+Nl>NMKzhdJZvxX8H<pAlE@tQ85M%}l0f7KFkZ=VVwz2R#^JIP*Pms|J
+QOb}~8HZyFF=b6I{0K*R$9{>OV
+
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/arrays/HotelBookingPossible.java b/src/main/java/com/pulkit/datastructures_algorithms/done/arrays/HotelBookingPossible.java
+index 02a7276..4ba29ef 100644
+--- a/src/main/java/com/pulkit/datastructures_algorithms/done/arrays/HotelBookingPossible.java
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/arrays/HotelBookingPossible.java
+@@ -24,15 +24,15 @@ public class HotelBookingPossible {
+     public static void main(String[] args) {
+         List<Integer> arrive = Arrays.asList(1, 2, 3, 4);
+         List<Integer> depart = Arrays.asList(10, 2, 6, 14);
+-        int K = 4; //true
++        int numberOfRooms = 4; //true
+ 
+         //Another Test case
+         //List<Integer> arrive = Arrays.asList(1, 2, 3);
+         //List<Integer> depart = Arrays.asList(2, 3, 4);
+-        //int K = 1; //true
++        //int numberOfRooms = 1; //true
+ 
+         HotelBookingPossible hotelBookingPossible = new HotelBookingPossible();
+-        System.out.println(hotelBookingPossible.hotel(arrive, depart, K));
++        System.out.println(hotelBookingPossible.hotel(arrive, depart, numberOfRooms));
+     }
+ 
+     private boolean hotel(List<Integer> arrive, List<Integer> depart, int K) {
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/dp/CoinChangingProblem.java b/src/main/java/com/pulkit/datastructures_algorithms/done/dp/CoinChangingProblem.java
+new file mode 100644
+index 0000000..03c72e2
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/dp/CoinChangingProblem.java
+@@ -0,0 +1,37 @@
++package com.pulkit.datastructures_algorithms.done.dp;
++
++public class CoinChangingProblem {
++    public static void main(String[] args) {
++        int coinsDenominationsAvailable[] = {1, 2, 5};
++        int amount = 7;
++        Counter counter = new Counter(0);
++        calculatePossibleChange(amount, coinsDenominationsAvailable, 0, 0, counter);
++        System.out.println(counter.count);
++    }
++
++    static void calculatePossibleChange(int amount, int coins[], int currentSum, int currentIndex, Counter counter) {
++        System.out.println("Executing for " + currentIndex + " " + currentSum);
++
++        if (amount < 0)
++            return;
++
++        if (currentSum > amount)
++            return;
++
++        if (currentSum == amount)
++            counter.count++;
++
++        for (int index = currentIndex; index < coins.length; index++) {
++            calculatePossibleChange(amount, coins, currentSum + coins[index],
++                    index, counter);
++        }
++    }
++}
++
++class Counter {
++    int count;
++
++    public Counter(int count) {
++        this.count = count;
++    }
++}
+\ No newline at end of file
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/dp/Knapsack.java b/src/main/java/com/pulkit/datastructures_algorithms/done/dp/Knapsack.java
+new file mode 100644
+index 0000000..943a18c
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/dp/Knapsack.java
+@@ -0,0 +1,75 @@
++package com.pulkit.datastructures_algorithms.done.dp;
++
++import java.util.HashMap;
++import java.util.Map;
++import java.util.Objects;
++
++public class Knapsack {
++    public static void main(String[] args) {
++        int[] profits = {3, 5, 7, 9, 11, 12};
++        int[] weights = {100, 110, 120, 220, 90, 100};
++
++        int maximumCapacity = 300;
++
++        int maxProfit = findMaxProfit(profits, weights, 0, maximumCapacity, 0, new HashMap<>());
++        System.out.println(maxProfit);
++    }
++
++    //2^N (Exponential)
++    private static int findMaxProfit(int[] profits, int[] weights, int currentProfit, int capacityRemaining,
++                                     int index, Map<Pair, Integer> cache) {
++        if (capacityRemaining < 0)
++            return currentProfit - profits[index - 1];
++
++        if (profits.length == 0)
++            return 0;
++
++        if (capacityRemaining == 0)
++            return currentProfit;
++
++        Pair key = new Pair(currentProfit, capacityRemaining);
++
++        if (cache.containsKey(key)) {
++            return cache.get(key);//Dp = recursion + memoization
++
++        } else {
++
++            int profitWhenWeStoleCurrentItem = findMaxProfit(profits, weights, currentProfit + profits[index],
++                    capacityRemaining - weights[index], index++, cache);
++
++            int profitWhenWeDidNotStoleCurrentItem = findMaxProfit(profits, weights, currentProfit,
++                    capacityRemaining, index++, cache);
++
++            int finalResult = Math.max(profitWhenWeStoleCurrentItem, profitWhenWeDidNotStoleCurrentItem);
++
++            Pair key1 = new Pair(currentProfit, capacityRemaining);
++            cache.put(key1, finalResult);
++
++            return finalResult;
++        }
++    }
++
++    static class Pair {
++        int currentProfit;
++        int capacityRemaining;
++
++        public Pair(int currentProfit, int capacityRemaining) {
++            this.currentProfit = currentProfit;
++            this.capacityRemaining = capacityRemaining;
++        }
++
++        @Override
++        public boolean equals(Object o) {
++            if (this == o) return true;
++            if (!(o instanceof Pair)) return false;
++            Pair pair = (Pair) o;
++            return currentProfit == pair.currentProfit &&
++                    capacityRemaining == pair.capacityRemaining;
++        }
++
++        @Override
++        public int hashCode() {
++            return Objects.hash(currentProfit, capacityRemaining);
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/graphs/ShortestPathBetweenNodes.java b/src/main/java/com/pulkit/datastructures_algorithms/done/graphs/ShortestPathBetweenNodes.java
+new file mode 100644
+index 0000000..428b49f
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/graphs/ShortestPathBetweenNodes.java
+@@ -0,0 +1,7 @@
++package com.pulkit.datastructures_algorithms.done.graphs;
++
++public class ShortestPathBetweenNodes {
++    public static void main(String[] args) {
++
++    }
++}
+\ No newline at end of file
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/stacks/NStackUsage.java b/src/main/java/com/pulkit/datastructures_algorithms/done/stacks/NStackUsage.java
+new file mode 100644
+index 0000000..01272a5
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/stacks/NStackUsage.java
+@@ -0,0 +1,41 @@
++package com.pulkit.datastructures_algorithms.done.stacks;
++
++public class NStackUsage {
++    public static void main(String[] args) {
++        NStack stacks = new NStack(3, 10);
++        stacks.put(0, 10);
++        stacks.put(2, 11);
++        System.out.println(stacks.pop(0));
++        System.out.println(stacks.pop(2));
++    }
++}
++
++class NStack {
++    private int[] stackArray;
++    private int[] stackHeadPointer;
++
++    public NStack(int numberOfStack, int capacityOfEachStack) {
++        stackArray = new int[numberOfStack * capacityOfEachStack];
++        stackHeadPointer = new int[numberOfStack];
++        initializeStackHeadPointer(capacityOfEachStack);
++    }
++
++    public void put(int stackNumber, int element) {
++        stackArray[stackHeadPointer[stackNumber]] = element;
++        stackHeadPointer[stackNumber]++;
++    }
++
++    public Integer pop(int stackNumber) {
++        int currentHead = stackHeadPointer[stackNumber];
++        stackHeadPointer[stackNumber]--;
++        return stackArray[currentHead];
++    }
++
++    private void initializeStackHeadPointer(int capacityOfEachStack) {
++        int startingIndex = 0;
++        for (int index = 0; index < stackHeadPointer.length; index++) {
++            stackHeadPointer[index] = startingIndex;
++            startingIndex += capacityOfEachStack;
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/trees/LongestConsecutiveBranch.java b/src/main/java/com/pulkit/datastructures_algorithms/done/trees/LongestConsecutiveBranch.java
+new file mode 100644
+index 0000000..151166a
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/trees/LongestConsecutiveBranch.java
+@@ -0,0 +1,20 @@
++package com.pulkit.datastructures_algorithms.done.trees;
++
++public class LongestConsecutiveBranch {
++    public static void main(String[] args) {
++
++    }
++
++    static void find(TreeNode node) {
++        if (node == null)
++            return;
++
++        if (node.leftChild.data == node.data + 1) {
++            find(node.leftChild);
++        }
++
++        if (node.rightChild.data == node.data + 1) {
++            find(node.rightChild);
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/done/trees/PathsIncludingNonRootAndNonLeafWithGivenSum.java b/src/main/java/com/pulkit/datastructures_algorithms/done/trees/PathsIncludingNonRootAndNonLeafWithGivenSum.java
+new file mode 100644
+index 0000000..3641ccd
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/done/trees/PathsIncludingNonRootAndNonLeafWithGivenSum.java
+@@ -0,0 +1,94 @@
++package com.pulkit.datastructures_algorithms.done.trees;
++
++import java.util.LinkedList;
++import java.util.List;
++
++public class PathsIncludingNonRootAndNonLeafWithGivenSum {
++    public static void main(String[] args) {
++        //TreeNode root = singlePathWith7AsGivenSum();
++
++        TreeNode root = dualPathWith7AsGivenSum();
++        LinkedList<List<TreeNode>> paths = new LinkedList<>();
++        findPaths(new Sum(7), root, paths, new LinkedList<>());
++    }
++
++    /*
++              1
++          2       3
++        4   5   3
++     */
++
++    public static void findPaths(Sum givenSum, TreeNode root, List<List<TreeNode>> paths,
++                                 List<TreeNode> currentPath) {
++        if (root == null) {
++            return;
++        }
++
++        currentPath.add(root);
++        givenSum.subtract(root.data);
++
++        if (givenSum.value == 0) {
++            List<TreeNode> tempList = new LinkedList<>(currentPath);
++            paths.add(tempList);
++        }
++
++        if (givenSum.value < 0) {
++            if (!currentPath.isEmpty()) {
++                TreeNode topElement = currentPath.remove(0);
++                givenSum.add(topElement.data);
++            }
++        }
++        if (root.leftChild != null) {
++            findPaths(givenSum, root.leftChild, paths, currentPath);
++            if (!currentPath.isEmpty()) {
++                currentPath.remove(currentPath.size() - 1);
++                givenSum.add(root.leftChild.data);
++            }
++        }
++        if (root.rightChild != null) {
++            findPaths(givenSum, root.rightChild, paths, currentPath);
++            if (!currentPath.isEmpty()) {
++                currentPath.remove(currentPath.size() - 1);
++                givenSum.add(root.rightChild.data);
++            }
++        }
++    }
++
++    private static class Sum {
++        int value;
++
++        public Sum(int value) {
++            this.value = value;
++        }
++
++        void add(int element) {
++            this.value += element;
++        }
++
++        void subtract(int element) {
++            this.value -= element;
++        }
++    }
++
++    private static TreeNode singlePathWith7AsGivenSum() {
++        TreeNode six = new TreeNode(6, null, null);
++        TreeNode five = new TreeNode(5, null, null);
++        TreeNode four = new TreeNode(4, null, null);
++        TreeNode three = new TreeNode(3, six, null);
++        TreeNode two = new TreeNode(2, four, five);
++        TreeNode root = new TreeNode(1, two, three);
++
++        return root;
++    }
++
++    private static TreeNode dualPathWith7AsGivenSum() {
++        TreeNode six = new TreeNode(3, null, null);
++        TreeNode five = new TreeNode(5, null, null);
++        TreeNode four = new TreeNode(4, null, null);
++        TreeNode three = new TreeNode(3, six, null);
++        TreeNode two = new TreeNode(2, four, five);
++        TreeNode root = new TreeNode(1, two, three);
++
++        return root;
++    }
++}
+diff --git a/src/main/java/com/pulkit/datastructures_algorithms/todo/DeleteANodeFromBinaryTree.java b/src/main/java/com/pulkit/datastructures_algorithms/todo/DeleteANodeFromBinaryTree.java
+new file mode 100644
+index 0000000..33e74b5
+--- /dev/null
++++ b/src/main/java/com/pulkit/datastructures_algorithms/todo/DeleteANodeFromBinaryTree.java
+@@ -0,0 +1,7 @@
++package com.pulkit.datastructures_algorithms.todo;
++
++public class DeleteANodeFromBinaryTree {
++    public static void main(String[] args) {
++
++    }
++}
+diff --git a/src/main/java/com/pulkit/jyoti/GraphNode.java b/src/main/java/com/pulkit/jyoti/GraphNode.java
+new file mode 100644
+index 0000000..79ae8ae
+--- /dev/null
++++ b/src/main/java/com/pulkit/jyoti/GraphNode.java
+@@ -0,0 +1,137 @@
++package com.pulkit.jyoti;
++
++import java.util.*;
++
++public class GraphNode {
++    int data;
++    List<GraphNode> neighbours;
++
++    public GraphNode(int data, List<GraphNode> neighbours) {
++        this.data = data;
++        this.neighbours = neighbours;
++    }
++
++    public void setNeighbours(List<GraphNode> neighbours) {
++        this.neighbours = neighbours;
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (!(o instanceof GraphNode)) return false;
++        GraphNode graphNode = (GraphNode) o;
++        return data == graphNode.data &&
++                neighbours.equals(graphNode.neighbours);
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(data, neighbours);
++    }
++
++    @Override
++    public String toString() {
++        return "" + data;
++    }
++
++    public static void main(String[] args) {
++        GraphNode Node5 = new GraphNode(5, null);
++        List<GraphNode> neighbours1 = new LinkedList<>();
++        neighbours1.add(Node5);
++
++        GraphNode Node2 = new GraphNode(2, null);
++        GraphNode Node3 = new GraphNode(3, null);
++        GraphNode Node4 = new GraphNode(4, neighbours1);
++
++
++        List<GraphNode> neighbours = new LinkedList<>();
++        neighbours.add(Node2);
++        neighbours.add(Node3);
++        neighbours.add(Node4);
++        GraphNode initialNode = new GraphNode(1, neighbours);
++
++
++        List<GraphNode> neighbours3 = new LinkedList<>();
++        neighbours3.add(initialNode);
++
++        Node2.setNeighbours(neighbours3);
++        Node3.setNeighbours(neighbours3);
++        Node4.setNeighbours(neighbours3);
++
++        DFS(initialNode, new HashSet<>());
++    }
++
++    public static void DFS(GraphNode node, Set<GraphNode> visited) {
++        //Stack Data structure or recursion
++        if (node == null)
++            return;
++
++        if (visited.contains(node))
++            return;
++
++        System.out.println(node);
++        visited.add(node);
++
++        List<GraphNode> neighbours = node.neighbours;
++
++        if (neighbours != null) {
++            for (GraphNode currentNode : neighbours) {
++                DFS(currentNode, visited);
++            }
++        }
++    }
++
++    public static void findTopologicalSort(Stack<GraphNode> stack, List<GraphNode> graph,
++                                           Set<GraphNode> visited) {
++        if (graph == null)
++            return;
++
++        for (GraphNode node : graph) {
++
++
++        }
++    }
++}
++
++//C->B->A->D->E / C->B->D->A->E / C->B->E->D->E // 2 or 3 more
++
++
++// B E C A D
++
++
++//(JRE/JVM)java A
++/*
++
++file : A.java -> A.class
++class A {
++B b = new B();
++}
++
++file : D.java -> D.class
++class D {
++B b = new B();
++}
++
++file : E.java -> E.class
++class E {
++B b = new B();
++}
++
++file : B.java -> B.class
++class B {
++C c = new C();
++}
++
++file : C.java -> C.class
++class C {
++//
++}
++
++*/
++/*
++Agra - mumbai
++mumbai - delhi
++delhi - kolkata
++kolata - bangluru
++Agra - banluru
++ */
+\ No newline at end of file
+diff --git a/to be committed/BoxStackingProblem.java b/to be committed/BoxStackingProblem.java
+new file mode 100644
+index 0000000..d1a3888
+--- /dev/null
++++ b/to be committed/BoxStackingProblem.java	
+@@ -0,0 +1,46 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++public class BoxStackingProblem {
++    public static void main(String[] args) {
++        int[] lengths = {4, 1, 4, 10};
++        int[] breadths = {6, 2, 5, 12};
++        int[] heights = {7, 3, 6, 32};
++
++        int maxHeight = findMaxHeight(Integer.MAX_VALUE, 0, lengths, breadths, heights, 0);
++        System.out.println(maxHeight);
++    }
++
++    private static int findMaxHeight(int currentBaseArea, int index, int[] lengths, int[] breadths,
++                                     int[] heights, int maxHeight) {
++        if (lengths.length == 0 || breadths.length == 0 || heights.length == 0)
++            return 0;
++
++        if (index >= lengths.length)
++            return maxHeight;
++
++        int result = 0;
++
++        int firstBasePossibility = lengths[index] * breadths[index];
++        if (firstBasePossibility < currentBaseArea) {
++            result = Math.max(result, findMaxHeight(firstBasePossibility, index + 1, lengths,
++                    breadths, heights, maxHeight + heights[index]));
++        }
++
++        int secondBasePossibility = lengths[index] * heights[index];
++        if (secondBasePossibility < currentBaseArea) {
++            result = Math.max(result, findMaxHeight(secondBasePossibility, index + 1, lengths,
++                    breadths, heights, maxHeight + breadths[index]));
++        }
++
++        int thirdBasePossibility = heights[index] * breadths[index];
++        if (thirdBasePossibility < currentBaseArea) {
++            result = Math.max(result, findMaxHeight(thirdBasePossibility, index + 1, lengths,
++                    breadths, heights, maxHeight + heights[index]));
++        }
++
++        int anotherResult = findMaxHeight(currentBaseArea, index + 1, lengths,
++                breadths, heights, maxHeight);
++
++        return Math.max(result, anotherResult);
++    }
++}
+diff --git a/to be committed/ConnectNodesAtSameLevel.java b/to be committed/ConnectNodesAtSameLevel.java
+new file mode 100644
+index 0000000..d1fcded
+--- /dev/null
++++ b/to be committed/ConnectNodesAtSameLevel.java	
+@@ -0,0 +1,181 @@
++//package com.mckinsey.engage.app.apis.mappings;
++//
++// /*
++//             1
++//      2              3
++//  4       5       6      n
++//n   n   n   8   9   10  n  n
++//                   11
++//*/
++//
++//public class ConnectNodesAtSameLevel {
++//    public static void main(String[] args) {
++//
++//    }
++//
++//    private static void connect(TreeNodeWithNext root) {
++//        if (root == null)
++//            return;
++//        if (areBothChildNull(root)) {
++//            return;
++//        }
++//
++//        while (root != null) {
++//            TreeNodeWithNext temp = root;
++//            while (temp != null) {
++//                if (areBothChildNotNull(temp)) {
++//                    temp.left.next = temp.right;
++//                }
++//                TreeNodeWithNext next = getNextSibling(temp);
++//                if (next != null) {
++//                    if (temp.right != null) {
++//                        temp.right = next;
++//                    } else if (temp.left != null) {
++//                        temp.left = next;
++//                    }
++//                }
++//                temp = moveTempToItsNextTillOneOfChildIsNotNull(temp);
++//            }
++//
++//            root = getNextChild(root);
++//        }
++//    }
++//
++//    private static TreeNodeWithNext getNextSibling(TreeNodeWithNext temp) {
++//        if (temp == null)
++//            return null;
++//
++//        if (temp.next == null) {
++//            return null;
++//        }
++//
++//        return getNextChild(temp.next);
++//    }
++//
++//    private static TreeNodeWithNext getNextChild(TreeNodeWithNext temp) {
++//        if (temp == null)
++//            return temp;
++//
++//        while (areBothChildNull(temp)) {
++//            temp = temp.next;
++//        }
++//
++//        if (temp.left != null)
++//            return temp.left;
++//
++//        if (temp.right != null)
++//            return temp.right;
++//
++//        return null;
++//    }
++//
++//    private static TreeNodeWithNext moveTempToItsNextTillOneOfChildIsNotNull(TreeNodeWithNext temp) {
++//        if (temp.next == null) {
++//            return null;
++//        }
++//
++//        while (areBothChildNull(temp.next)) {
++//            temp = temp.next;
++//        }
++//
++//        return temp.next;
++//    }
++//
++//    private static boolean areBothChildNull(TreeNodeWithNext temp) {
++//        if (temp == null)
++//            return false;
++//
++//        return temp.left == null && temp.right == null;
++//    }
++//
++//    private static boolean areBothChildNotNull(TreeNodeWithNext temp) {
++//        if (temp == null)
++//            return false;
++//
++//        return temp.left != null && temp.right != null;
++//    }
++//}
++//
++//
++//class TreeNodeWithNext {
++//    int val;
++//    TreeNodeWithNext left;
++//    TreeNodeWithNext right;
++//    TreeNodeWithNext next;
++//
++//    TreeNodeWithNext() {
++//    }
++//
++//    TreeNodeWithNext(int val) {
++//        this.val = val;
++//    }
++//
++//    TreeNodeWithNext(int val, TreeNodeWithNext left, TreeNodeWithNext right) {
++//        this.val = val;
++//        this.left = left;
++//        this.right = right;
++//    }
++//}
++///*
++//while root:
++//	while root:
++//		if root.left:
++//			next_level_first_node=root.left
++//			break
++//		if root.right:
++//			next_level_first_node=root.right
++//			break
++//		root = root.next
++//		while root:
++//			if root.left and root.right:
++//				root.left.next = root.right
++//			while root.next:
++//				if root.next.left:
++//					root.right.next=root.next.left
++//					break
++//				if root.next.right:
++//					root.right.next=root.next.right
++//					break
++//				root = root.next
++//			elif root.left:
++//				while root.next:
++//				if root.next.left:
++//					root.left.next=root.next.left
++//					break
++//				if root.next.right:
++//					root.left.next=root.next.right
++//					break
++//				root = root.next
++//			elif root.right:
++//				while root.next:
++//				if root.next.left:
++//					root.right.next=root.next.left
++//					break
++//				if root.next.right:
++//					root.right.next=root.next.right
++//					break
++//				root = root.next
++//
++//	root = next_level_first_node
++//
++///*
++//             1
++//      2              3
++//  4       5       6      n
++//n   n   n   8   9   10  n  n
++//                   11
++//*/
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//
++// */
+diff --git a/to be committed/CuttingARod.java b/to be committed/CuttingARod.java
+new file mode 100644
+index 0000000..7a675d0
+--- /dev/null
++++ b/to be committed/CuttingARod.java	
+@@ -0,0 +1,65 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++public class CuttingARod {
++    public static void main(String[] args) {
++        int[] length = {1, 2, 3, 4, 5, 6, 7, 8};
++        int[] profit = {1, 5, 8, 9, 10, 17, 17, 20};
++        int totalLength = 8;
++
++//        int[] length = {1, 2, 3, 4};
++//        int[] profit = {2, 5, 7, 8};
++//        int totalLength = 5;
++
++//        int[] length = {1, 2};
++//        int[] profit = {2, 5};
++//        int totalLength = 2;
++
++//        int[] length = {1, 2, 3};
++//        int[] profit = {2, 5, 7};
++//        int totalLength = 3;
++
++        int currentProfit = 0;
++        int index = 0;
++        System.out.println(findMaxProfit(length, profit, currentProfit, totalLength, index));
++    }
++
++    private static int findMaxProfit(int[] length, int[] profit, int currentProfit,
++                                     int totalLength, int index) {
++
++        if (index >= profit.length) {
++            return currentProfit;
++        }
++
++        if (totalLength < 0) {
++            if (index > 0) {
++                return currentProfit - profit[index];
++            }
++            return 0;
++        }
++
++        if (totalLength == 0) {
++            return currentProfit;
++        }
++
++        int maxProfitWhenCutIsMadeAtCurrentLength = findMaxProfit(length, profit,
++                currentProfit + profit[index], totalLength - length[index],
++                index);
++
++        int maxProfitWhenCutIsMadeAtNextLength = 0;
++
++        if (index + 1 < profit.length) {
++            maxProfitWhenCutIsMadeAtNextLength = findMaxProfit(length, profit,
++                    currentProfit + profit[index + 1], totalLength - length[index + 1],
++                    index + 1);
++        }
++
++        int maxProfitWhenCutIsNotMadeAtCurrentLength = findMaxProfit(length, profit, currentProfit,
++                totalLength, index + 1);
++
++        int result = Math.max(maxProfitWhenCutIsMadeAtCurrentLength, maxProfitWhenCutIsNotMadeAtCurrentLength);
++        int finalResult = Math.max(maxProfitWhenCutIsMadeAtNextLength, result);
++
++//        int finalResult = Math.max(maxProfitWhenCutIsMadeAtNextLength, maxProfitWhenCutIsNotMadeAtCurrentLength);
++        return finalResult;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/FlattenBinaryTreeToSinglyLinkedList.java b/to be committed/FlattenBinaryTreeToSinglyLinkedList.java
+new file mode 100644
+index 0000000..d47baf0
+--- /dev/null
++++ b/to be committed/FlattenBinaryTreeToSinglyLinkedList.java	
+@@ -0,0 +1,86 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.LinkedList;
++import java.util.PriorityQueue;
++import java.util.Queue;
++
++public class FlattenBinaryTreeToSinglyLinkedList {
++    public static void main(String[] args) {
++        TreeNode six = new TreeNode(6, null, null);
++        TreeNode four = new TreeNode(4, null, null);
++        TreeNode three = new TreeNode(3, null, null);
++        TreeNode five = new TreeNode(5, null, six);
++        TreeNode two = new TreeNode(2, three, four);
++        TreeNode root = new TreeNode(1, two, five);
++
++        flatten(root);
++        printLevelOrder(root);
++    }
++
++    static void printLevelOrder(TreeNode root) {
++        PriorityQueue priorityQueue = new PriorityQueue();
++
++
++        Queue<TreeNode> queue = new LinkedList<TreeNode>();
++        queue.add(root);
++        while (!queue.isEmpty()) {
++            TreeNode tempNode = queue.poll();
++            System.out.print(tempNode.val + " ");
++
++            if (tempNode.left != null) {
++                queue.add(tempNode.left);
++            }
++
++            if (tempNode.right != null) {
++                queue.add(tempNode.right);
++            }
++        }
++    }
++
++    private static void flatten(TreeNode root) {
++        if (root == null)
++            return;
++
++        if (root.left == null && root.right == null)
++            return;
++
++        flatten(root.left);
++        flatten(root.right);
++
++        TreeNode temp = root.right;
++        root.right = root.left;
++        root.left = null;
++        TreeNode anotherTemp = root.right;
++
++        while (anotherTemp != null && anotherTemp.right != null) {
++            anotherTemp = anotherTemp.right;
++        }
++
++        if (anotherTemp != null) {
++            anotherTemp.right = temp;
++        }
++
++        if (anotherTemp == null) {
++            root.right = temp;
++        }
++    }
++}
++
++class TreeNode {
++    int val;
++    TreeNode left;
++    TreeNode right;
++
++    TreeNode() {
++    }
++
++    TreeNode(int val) {
++        this.val = val;
++    }
++
++    TreeNode(int val, TreeNode left, TreeNode right) {
++        this.val = val;
++        this.left = left;
++        this.right = right;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/GenerateParentheses.java b/to be committed/GenerateParentheses.java
+new file mode 100644
+index 0000000..eb653c8
+--- /dev/null
++++ b/to be committed/GenerateParentheses.java	
+@@ -0,0 +1,25 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.LinkedList;
++import java.util.List;
++
++public class GenerateParentheses {
++    public static void main(String[] args) {
++        LinkedList<String> result = new LinkedList<>();
++        generate(result, "", 3, 0, 0);
++        System.out.println(result);
++    }
++
++    private static void generate(List<String> result, String parentheses, int halfSize, int openingBraces, int closingBraces) {
++        if (parentheses.length() == halfSize * 2) {
++            result.add(parentheses);
++            return;
++        }
++        if (openingBraces < halfSize) {
++            generate(result, parentheses + "(", halfSize, openingBraces + 1, closingBraces);
++        }
++        if (closingBraces < openingBraces) {
++            generate(result, parentheses + ")", halfSize, openingBraces, closingBraces + 1);
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/HouseThief.java b/to be committed/HouseThief.java
+new file mode 100644
+index 0000000..67ee158
+--- /dev/null
++++ b/to be committed/HouseThief.java	
+@@ -0,0 +1,25 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++public class HouseThief {
++    public static void main(String[] args) {
++        int[] profits = {3, 1, 2, 4, 5, 2};
++
++        int maxProfit = findMaxProfit(profits, 0, 0);
++        System.out.println(maxProfit);
++    }
++
++    private static int findMaxProfit(int[] profit, int maxProfitTillNow, int index) {
++        if (profit.length <= 0)
++            return 0;
++
++        if (index >= profit.length)
++            return maxProfitTillNow;
++
++        int possibleMaxProfit = findMaxProfit(profit, maxProfitTillNow + profit[index],
++                index + 2);
++
++        int anotherPossibleMaxProfit = findMaxProfit(profit, maxProfitTillNow, index + 1);
++
++        return Math.max(possibleMaxProfit, anotherPossibleMaxProfit);
++    }
++}
+diff --git a/to be committed/KeyPadProblem.java b/to be committed/KeyPadProblem.java
+new file mode 100644
+index 0000000..a8f2961
+--- /dev/null
++++ b/to be committed/KeyPadProblem.java	
+@@ -0,0 +1,51 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.HashMap;
++import java.util.LinkedList;
++import java.util.List;
++import java.util.Map;
++
++public class KeyPadProblem {
++    private static Map<String, String> digitLetterMap = new HashMap();
++
++    public static void main(String[] args) {
++        digitLetterMap.put("2", "abc");
++        digitLetterMap.put("3", "def");
++        digitLetterMap.put("4", "ghi");
++        digitLetterMap.put("5", "jkl");
++        digitLetterMap.put("6", "mno");
++        digitLetterMap.put("7", "pqrs");
++        digitLetterMap.put("8", "tuv");
++        digitLetterMap.put("9", "wxyz");
++
++        List<String> strings = generateAllLetterRepresentation("23", 0);
++        System.out.println(strings);
++    }
++
++    private static List<String> generateAllLetterRepresentation(String number, int index) {
++        if (number == null) {
++            List<String> emptyStringList = new LinkedList<>();
++            emptyStringList.add("");
++            return emptyStringList;
++        }
++
++        if (index >= number.length()) {
++            List<String> emptyStringList = new LinkedList<>();
++            emptyStringList.add("");
++            return emptyStringList;
++        }
++
++        List<String> currentRepresentations = generateAllLetterRepresentation(number, index + 1);
++        List<String> newRepresentations = new LinkedList<>();
++
++        for (String representation : currentRepresentations) {
++            Character digit = number.charAt(index);
++            String letters = digitLetterMap.get(digit.toString());
++            for (int localIndex = 0; localIndex < letters.length(); localIndex++) {
++                char localCharacter = letters.charAt(localIndex);
++                newRepresentations.add(localCharacter + representation);
++            }
++        }
++        return newRepresentations;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/KeyPadProblemm.java b/to be committed/KeyPadProblemm.java
+new file mode 100644
+index 0000000..3d0d991
+--- /dev/null
++++ b/to be committed/KeyPadProblemm.java	
+@@ -0,0 +1,59 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.HashMap;
++import java.util.LinkedList;
++import java.util.List;
++import java.util.Map;
++
++public class KeyPadProblemm {
++    private static Map<String, String> digitLetterMap = new HashMap();
++
++    public static void main(String[] args) {
++        digitLetterMap.put("2", "abc");
++        digitLetterMap.put("3", "def");
++        digitLetterMap.put("4", "ghi");
++        digitLetterMap.put("5", "jkl");
++        digitLetterMap.put("6", "mno");
++        digitLetterMap.put("7", "pqrs");
++        digitLetterMap.put("8", "tuv");
++        digitLetterMap.put("9", "wxyz");
++
++        List<String> strings = generateAllCombinations("245", 0);
++        System.out.println(strings.size());
++        System.out.println(strings);
++    }
++
++    //null case (base case && ending case)
++    // 1 node or 1 size
++    // recurrence relation
++
++    private static List<String> generateAllCombinations(String number, int index) {
++        if (number == null)
++            return new LinkedList<>();
++
++        if (number.length() == 0)
++            return new LinkedList<>();
++
++        if (index >= number.length()) {
++
++            LinkedList<String> emptyList = new LinkedList<>();
++            emptyList.add("");
++            return emptyList;
++        }
++
++        List<String> combinationsGeneratedTillNow = generateAllCombinations(number, index + 1);
++        List<String> result = new LinkedList<>();
++
++        Character currentDigit = number.charAt(index);
++        String letter = digitLetterMap.get(currentDigit.toString()); //"abc"
++
++        for (String combination : combinationsGeneratedTillNow) {
++            for (int localIndex = 0; localIndex < letter.length(); localIndex++) {
++                Character currentAlphabet = letter.charAt(localIndex);
++                result.add(currentAlphabet + combination);
++            }
++        }
++
++        return result;
++    }
++}
+diff --git a/to be committed/KnapsackProblem.java b/to be committed/KnapsackProblem.java
+new file mode 100644
+index 0000000..2f73ece
+--- /dev/null
++++ b/to be committed/KnapsackProblem.java	
+@@ -0,0 +1,224 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.HashMap;
++import java.util.Map;
++import java.util.Objects;
++
++//class GFG {
++//    public static void main(String[] args) {
++//        Scanner scanner = new Scanner(System.in);
++//        int numberOfTestCases = scanner.nextInt();
++//
++//        while (numberOfTestCases-- > 0) {
++//            int numberOfItems = scanner.nextInt();
++//            int maximumCapacity = scanner.nextInt();
++//
++//            int[] profits = new int[numberOfItems];
++//            int[] weights = new int[numberOfItems];
++//
++//            for (int index = 0; index < numberOfItems; index++) {
++//                profits[index] = scanner.nextInt();
++//            }
++//            for (int index = 0; index < numberOfItems; index++) {
++//                weights[index] = scanner.nextInt();
++//            }
++//
++//            int maxProfit = 0;
++//            int currentWeight = 0;
++//            int index = 0;
++//
++//            Map<MaxProfitCurrentWeightPair, Integer> cache = new HashMap<>();
++//
++//            GFG gfg = new GFG();
++//            Integer maxProfit1 = gfg.findMaxProfit(maxProfit, maximumCapacity, maximumCapacity, index,
++//                    profits, weights, cache);
++//            System.out.println(maxProfit1);
++//        }
++//    }
++//
++//    private Integer findMaxProfit(int maxProfitTillNow, int currentWeight, int totalWeightAllowed,
++//                                  int index, int[] profits, int[] weights,
++//                                  Map<MaxProfitCurrentWeightPair, Integer> cache) {
++//        if (totalWeightAllowed < 0) {
++//            return 0;
++//        }
++//
++//        if (currentWeight < 0) {
++//            return maxProfitTillNow - profits[index - 1];
++//        }
++//
++//        if (index >= profits.length) {
++//            return maxProfitTillNow;
++//        }
++//
++//        if (totalWeightAllowed == currentWeight) {
++//            return maxProfitTillNow;
++//        }
++//
++//        if (cache.containsKey(new MaxProfitCurrentWeightPair(maxProfitTillNow, currentWeight))) {
++//            return cache.get(new MaxProfitCurrentWeightPair(maxProfitTillNow, currentWeight));
++//        } else {
++//            int maxProfitWhenCurrentWeightAdded = findMaxProfit(maxProfitTillNow + profits[index],
++//                    currentWeight - weights[index], totalWeightAllowed, index + 1,
++//                    profits, weights, cache);
++//
++//
++//            int maxProfitWhenCurrentWeightNotAdded = findMaxProfit(maxProfitTillNow, currentWeight,
++//                    totalWeightAllowed, index + 1, profits, weights, cache);
++//
++//            int result = Math.max(maxProfitWhenCurrentWeightAdded, maxProfitWhenCurrentWeightNotAdded);
++//
++//            MaxProfitCurrentWeightPair key = new MaxProfitCurrentWeightPair(maxProfitTillNow, currentWeight);
++//            cache.put(key, result);
++//            return result;
++//        }
++//    }
++//}
++//
++//class MaxProfitCurrentWeightPair {
++//    int maxProfit;
++//    int currentWeight;
++//
++//    public MaxProfitCurrentWeightPair(int maxProfit, int currentWeight) {
++//        this.maxProfit = maxProfit;
++//        this.currentWeight = currentWeight;
++//    }
++//
++//    @Override
++//    public boolean equals(Object o) {
++//        if (this == o) return true;
++//        if (o == null || getClass() != o.getClass()) return false;
++//        MaxProfitCurrentWeightPair maxProfitCurrentWeightPair = (MaxProfitCurrentWeightPair) o;
++//        return maxProfit == maxProfitCurrentWeightPair.maxProfit &&
++//                currentWeight == maxProfitCurrentWeightPair.currentWeight;
++//    }
++//
++//    @Override
++//    public int hashCode() {
++//        return Objects.hash(maxProfit, currentWeight);
++//    }
++//}
++
++public class KnapsackProblem {
++    private static Map<MaxProfitCurrentWeightPair, Integer> cache = new HashMap<>();
++
++    public static void main(String[] args) {
++//        int totalWeightAllowed = 50;
++//        int[] profits = {60, 100, 120};
++//        int[] weights = {10, 20, 30};
++
++//        int totalWeightAllowed = 50;
++//        int[] profits = {60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70};
++//        int[] weights = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
++
++        int totalWeightAllowed = 50;
++        int[] profits = {60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70, 60, 100, 120, 100, 20, 30, 40, 50, 60, 70};
++        int[] weights = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50};
++
++        System.out.println("profits size " + profits.length);
++        System.out.println("weights size " + weights.length);
++
++//        int totalWeightAllowed = 4;
++//        int[] profits = {1, 2, 3};
++//        int[] weights = {4, 5, 1};
++
++//        int totalWeightAllowed = 3;
++//        int[] profits = {1, 2, 3};
++//        int[] weights = {4, 5, 6};
++
++//        int totalWeightAllowed = 5;
++//        int[] profits = {4, 5, 3, 7};
++//        int[] weights = {2, 3, 1, 4};
++
++//      //int totalWeightAllowed = 7;
++//        int totalWeightAllowed = 6;
++//        int[] profits = {1, 6, 10, 16};
++//        int[] weights = {1, 2, 3, 5};
++
++//        int totalWeightAllowed = 10;
++//        int[] profits = {10, 40, 30, 50};
++//        int[] weights = {5, 4, 6, 3};
++
++        int maxProfit = 0;
++        int currentWeight = 0;
++        int index = 0;
++
++        Counter counter = new Counter(0L);
++
++        System.out.println(findMaxProfit(maxProfit, currentWeight, totalWeightAllowed, index,
++                profits, weights, counter));
++        System.out.println(counter.value);
++    }
++
++    private static Integer findMaxProfit(int maxProfitTillNow, int currentWeight, int totalWeightAllowed,
++                                         int index, int[] profits, int[] weights, Counter counter) {
++        if (totalWeightAllowed < 0) {
++            return 0;
++        }
++
++        if (currentWeight > totalWeightAllowed) {
++            return maxProfitTillNow - profits[index - 1];
++        }
++
++        if (index >= profits.length) {
++            return maxProfitTillNow;
++        }
++
++        if (totalWeightAllowed == currentWeight) {
++            return maxProfitTillNow;
++        }
++
++        if (cache.containsKey(new MaxProfitCurrentWeightPair(maxProfitTillNow, currentWeight))) {
++            //System.out.println("========saved call=========");
++            //counter.value++;
++            return cache.get(new MaxProfitCurrentWeightPair(maxProfitTillNow, currentWeight));
++        } else {
++            counter.value++;
++            int maxProfitWhenCurrentWeightAdded = findMaxProfit(maxProfitTillNow + profits[index],
++                    currentWeight + weights[index], totalWeightAllowed, index + 1,
++                    profits, weights, counter);
++
++
++            int maxProfitWhenCurrentWeightNotAdded = findMaxProfit(maxProfitTillNow, currentWeight,
++                    totalWeightAllowed, index + 1, profits, weights, counter);
++
++            int result = Math.max(maxProfitWhenCurrentWeightAdded, maxProfitWhenCurrentWeightNotAdded);
++
++            MaxProfitCurrentWeightPair key = new MaxProfitCurrentWeightPair(maxProfitTillNow, currentWeight);
++            cache.put(key, result);
++            return result;
++        }
++    }
++}
++
++class MaxProfitCurrentWeightPair {
++    int maxProfit;
++    int currentWeight;
++
++    public MaxProfitCurrentWeightPair(int maxProfit, int currentWeight) {
++        this.maxProfit = maxProfit;
++        this.currentWeight = currentWeight;
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (o == null || getClass() != o.getClass()) return false;
++        MaxProfitCurrentWeightPair maxProfitCurrentWeightPair = (MaxProfitCurrentWeightPair) o;
++        return maxProfit == maxProfitCurrentWeightPair.maxProfit &&
++                currentWeight == maxProfitCurrentWeightPair.currentWeight;
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(maxProfit, currentWeight);
++    }
++}
++
++class Counter {
++    Long value;
++
++    public Counter(Long value) {
++        this.value = value;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/Permutation.java b/to be committed/Permutation.java
+new file mode 100644
+index 0000000..5f11275
+--- /dev/null
++++ b/to be committed/Permutation.java	
+@@ -0,0 +1,43 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.LinkedList;
++import java.util.List;
++
++import static java.lang.System.out;
++
++public class Permutation {
++    public static void main(String[] args) {
++        List<String> permutations = getPermutations("abcd", 0);
++        out.println(permutations);
++        out.println(permutations.size());
++    }
++
++    static List<String> getPermutations(String string, int k) {
++        if (string.length() == 0 || k >= string.length()) {
++            List<String> tempList = new LinkedList<>();
++            tempList.add("");
++
++            return tempList;
++        }
++
++        List<String> currentPermutations = getPermutations(string, k + 1);
++        char firstCharacter = string.charAt(k);
++
++        List<String> newPermutationList = new LinkedList<>();
++
++        for (String permutation : currentPermutations) {
++            for (int j = 0; j <= permutation.length(); j++) {
++                String temp = "";
++
++                if (permutation.equals("")) {
++                    temp = temp + firstCharacter;
++                } else {
++                    temp = permutation.substring(0, j) + firstCharacter + permutation.substring(j);
++                }
++                newPermutationList.add(temp);
++            }
++        }
++
++        return newPermutationList;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/PriorityQueueTrial.java b/to be committed/PriorityQueueTrial.java
+new file mode 100644
+index 0000000..a736a3d
+--- /dev/null
++++ b/to be committed/PriorityQueueTrial.java	
+@@ -0,0 +1,14 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.PriorityQueue;
++
++public class PriorityQueueTrial {
++    public static void main(String[] args) {
++//        PriorityQueue pq = new PriorityQueue();
++//        pq.offer();
++//        pq.poll()
++
++    }
++
++
++}
+diff --git a/to be committed/RottenTomatoes.java b/to be committed/RottenTomatoes.java
+new file mode 100644
+index 0000000..58f062f
+--- /dev/null
++++ b/to be committed/RottenTomatoes.java	
+@@ -0,0 +1,27 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++public class RottenTomatoes {
++    public static void main(String[] args) {
++
++    }
++
++//    private static int findRottenTomatoes(int[][] grid, int xCoordinate, int yCoordinate, int minutes) {
++//
++//        if (grid[xCoordinate + 1][yCoordinate] == 2) {
++//            findRottenTomatoes(grid, xCoordinate + 1, yCoordinate, minutes + 1);
++//        }
++//
++//        if (grid[xCoordinate][yCoordinate + 1] == 2) {
++//            findRottenTomatoes(grid, xCoordinate, yCoordinate + 1, minutes + 1);
++//        }
++//
++//        if (grid[xCoordinate - 1][yCoordinate] == 2) {
++//            findRottenTomatoes(grid, xCoordinate - 1, yCoordinate, minutes + 1);
++//        }
++//
++//        if (grid[xCoordinate][yCoordinate - 1] == 2) {
++//            findRottenTomatoes(grid, xCoordinate, yCoordinate - 1, minutes + 1);
++//        }
++//
++//    }
++}
+\ No newline at end of file
+diff --git a/to be committed/SearchSystem.java b/to be committed/SearchSystem.java
+new file mode 100644
+index 0000000..05d5c2e
+--- /dev/null
++++ b/to be committed/SearchSystem.java	
+@@ -0,0 +1,88 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.LinkedList;
++import java.util.List;
++
++public class SearchSystem {
++    public static void main(String[] args) {
++        TrieNode root = new TrieNode('/');
++        String text = "rajjorani";
++        String anotherText = "rajjorand";
++        insertInTrie(root, text.toLowerCase(), 0);
++        insertInTrie(root, anotherText.toLowerCase(), 0);
++
++        StringBuilder builder = new StringBuilder();
++        LinkedList<StringBuilder> result = new LinkedList<>();
++        searchInTrie(root, "raj", 0, builder, result);
++    }
++
++    private static void insertInTrie(TrieNode root, String text, int index) {
++        if (text == null || text.length() == 0) {
++            return;
++        }
++
++        if (index >= text.length()) {
++            return;
++        }
++
++        char character = text.charAt(index);
++        int indexOfCharacter = character - 'a';
++        TrieNode[] currentNodeChildren = root.children;
++
++        TrieNode trieNode = currentNodeChildren[indexOfCharacter];
++
++        if (trieNode == null) {
++            trieNode = new TrieNode(character);
++            currentNodeChildren[indexOfCharacter] = trieNode;
++        }
++
++        if (index == text.length() - 1) {
++            trieNode.endOfWord = true;
++            return;
++        }
++
++        insertInTrie(trieNode, text, index + 1);
++    }
++
++    private static void searchInTrie(TrieNode node, String prefix, int index, StringBuilder builder,
++                                     List<StringBuilder> result) {
++        if (prefix == null && prefix.length() == 0) {
++            return;
++        }
++
++        if (node.endOfWord == true) {
++            StringBuilder tempBuilder = new StringBuilder(builder);
++            result.add(tempBuilder);
++        }
++
++        if (index < prefix.length()) {
++            TrieNode[] currentChildren = node.children;
++            char currentCharacterInPrefix = prefix.charAt(index);
++            int indexOfCharacter = currentCharacterInPrefix - 'a';
++            TrieNode trieNode = currentChildren[indexOfCharacter];
++
++            builder.append(trieNode.value);
++
++            searchInTrie(trieNode, prefix, index + 1, builder, result);
++
++        } else {
++            for (TrieNode trieNode : node.children) {
++                if (trieNode != null) {
++                    builder.append(trieNode.value);
++                    searchInTrie(trieNode, prefix, index, builder, result);
++                    builder.deleteCharAt(builder.length() - 1);
++                }
++            }
++        }
++    }
++}
++
++class TrieNode {
++    Character value;
++    TrieNode[] children = new TrieNode[26];
++    boolean endOfWord;
++
++    public TrieNode(Character value) {
++        this.value = value;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/SkyLineProblem.java b/to be committed/SkyLineProblem.java
+new file mode 100644
+index 0000000..7062a62
+--- /dev/null
++++ b/to be committed/SkyLineProblem.java	
+@@ -0,0 +1,70 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.LinkedList;
++import java.util.List;
++
++public class SkyLineProblem {
++    public static void main(String[] args) {
++
++    }
++
++    private static List<Building> constructSkyline(List<Building> buildings) {
++        if (buildings == null) {
++            return new LinkedList<>();
++        }
++
++        if (buildings.size() == 0) {
++            return new LinkedList<>();
++        }
++
++        List<Building> skyline = new LinkedList<>();
++        Building firstBuilding = buildings.get(0);
++        int currentLeftXCoordinate = firstBuilding.leftXCoordinate;
++        int currentRightXCoordinate = firstBuilding.rightXCoordinate;
++        int currentHeight = firstBuilding.height;
++
++        for (int index = 1; index < buildings.size(); index++) {
++            Building building = buildings.get(index);
++            int nextLeftXCoordinate = building.leftXCoordinate;
++            int nextRightXCoordinate = building.rightXCoordinate;
++            int nextHeight = building.height;
++
++            if (currentRightXCoordinate > nextLeftXCoordinate) {
++                if (currentRightXCoordinate > nextRightXCoordinate) {
++                    if (currentHeight > nextHeight) {
++                        skyline.add(new Building(currentLeftXCoordinate, currentRightXCoordinate, currentHeight));
++                    } else {
++                        skyline.add(new Building(currentLeftXCoordinate, nextLeftXCoordinate, currentHeight));
++                        skyline.add(new Building(nextLeftXCoordinate, nextRightXCoordinate, nextHeight));
++                        skyline.add(new Building(nextRightXCoordinate, currentRightXCoordinate, currentHeight));
++                    }
++                } else {
++                    if (currentHeight > nextHeight) {
++                        skyline.add(new Building(currentLeftXCoordinate, currentRightXCoordinate, currentHeight));
++                        skyline.add(new Building(currentRightXCoordinate, nextRightXCoordinate, nextHeight));
++                    } else {
++                        skyline.add(new Building(currentLeftXCoordinate, currentRightXCoordinate, currentHeight));
++                        skyline.add(new Building(currentRightXCoordinate, nextRightXCoordinate, nextHeight));
++                    }
++                }
++            } else {
++                skyline.add(new Building(currentLeftXCoordinate, currentRightXCoordinate, currentHeight));
++                skyline.add(new Building(currentRightXCoordinate, nextLeftXCoordinate, 0));
++                skyline.add(new Building(nextLeftXCoordinate, nextRightXCoordinate, nextHeight));
++            }
++        }
++        return skyline;
++    }
++}
++
++class Building {
++    int leftXCoordinate;
++    int rightXCoordinate;
++    int height;
++
++    public Building(int leftXCoordinate, int rightXCoordinate, int height) {
++        this.leftXCoordinate = leftXCoordinate;
++        this.rightXCoordinate = rightXCoordinate;
++        this.height = height;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/SubSetSumProblem.java b/to be committed/SubSetSumProblem.java
+new file mode 100644
+index 0000000..597f892
+--- /dev/null
++++ b/to be committed/SubSetSumProblem.java	
+@@ -0,0 +1,129 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.HashMap;
++import java.util.Map;
++import java.util.Objects;
++
++public class SubSetSumProblem {
++
++    public static void main(String[] args) {
++        //int array[] = {1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4};
++        //int target = 30;
++
++        int array[] = {3, 34, 4, 12, 5, 2};
++        int target = 9;
++
++        //int numberOfSubsets = findSubSet(target, array, 0, new HashMap<>(), 0);
++        //int numberOfSubsets = findSubSet(target, array, 0, new HashMap<>(), 0);
++
++        boolean result = findSubSetIfPresent(target, array, 0, new HashMap<>());
++        System.out.println(result);
++    }
++
++    private static Boolean findSubSetIfPresent(int target, int array[], int index,
++                                               Map<Pair, Boolean> cache) {
++        System.out.println("Target-> " + target + " " + "index-> " + index);
++
++        if (target < 0)
++            return false;
++
++        if (target == 0) {
++            return true;
++        }
++
++        Boolean value = false;
++
++        for (int tempIndex = index; tempIndex < array.length; tempIndex++) {
++            Pair key = new Pair(target, tempIndex);
++
++            if (!cache.containsKey(key)) {
++                value = value || findSubSetIfPresent(target - array[tempIndex],
++                        array, tempIndex + 1, cache);
++                //|| findSubSetIfPresent(target, array, tempIndex + 1, cache);
++
++                cache.put(key, value);
++                //return value;
++            } else {
++                value = cache.get(key);
++            }
++        }
++
++        return value;
++        //return false;
++    }
++
++    private static Boolean findSubSetIfPresentByRajat(int target, int array[], int index,
++                                                      Map<Pair, Boolean> cache) {
++        System.out.println("Target-> " + target + " " + "index-> " + index);
++
++        if (target < 0)
++            return false;
++
++        if (target == 0) {
++            return true;
++        }
++
++        for (int tempIndex = index; tempIndex < array.length; tempIndex++) {
++            Pair key = new Pair(target, index);
++
++            if (!cache.containsKey(key)) {
++                boolean value = findSubSetIfPresentByRajat(target - array[tempIndex], array, tempIndex + 1, cache)
++                        || findSubSetIfPresentByRajat(target, array, tempIndex + 1, cache);
++
++                cache.put(key, value);
++                return value;
++            } else {
++                return cache.get(key);
++            }
++        }
++        return false;
++    }
++
++//    private static int findSubSet(int target, int array[], int index,
++//                                  Map<Pair, Integer> cache, int result) {
++//        if (target < 0)
++//            return 0;
++//
++//        if (target == 0) {
++//            return 1;
++//        }
++//
++//        for (int tempIndex = index; tempIndex < array.length; tempIndex++) {
++//            Pair key = new Pair(target, index);
++//            int value;
++//
++//            if (!cache.containsKey(key)) {
++//                value = findSubSet(target - array[tempIndex], array, tempIndex + 1, cache, result);
++//                cache.put(key, value);
++//            } else {
++//                value = cache.get(key);
++//            }
++//            result += value;
++//        }
++//        return result;
++//    }
++}
++
++class Pair {
++    int target;
++    int index;
++
++    public Pair(int target, int index) {
++        this.target = target;
++        this.index = index;
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (o == null || getClass() != o.getClass()) return false;
++        Pair pair = (Pair) o;
++        return target == pair.target &&
++                index == pair.index;
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(target, index);
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/Subset.java b/to be committed/Subset.java
+new file mode 100644
+index 0000000..b5a22fc
+--- /dev/null
++++ b/to be committed/Subset.java	
+@@ -0,0 +1,39 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.LinkedList;
++import java.util.List;
++
++public class Subset {
++    public static void main(String[] args) {
++        List<StringBuilder> result = permute(new StringBuilder("abc"), 0);
++        System.out.println(result);
++    }
++
++    static List<StringBuilder> permute(StringBuilder string, int index) {
++        if (string.length() == 0) {
++            List<StringBuilder> baseCaseList = new LinkedList<>();
++            baseCaseList.add(new StringBuilder(""));
++            return baseCaseList;
++        }
++
++        if (index >= string.length()) {
++            List<StringBuilder> baseCaseList = new LinkedList<>();
++            baseCaseList.add(new StringBuilder(""));
++            return baseCaseList;
++        }
++
++        List<StringBuilder> permutationsTillNow = permute(string, index + 1);
++        List<StringBuilder> temp = new LinkedList<>(permutationsTillNow);
++
++        Character currentCharacter = string.charAt(index);
++
++        for (StringBuilder permutation : temp) {
++            permutationsTillNow.add(new StringBuilder()
++                    .append(currentCharacter)
++                    .append(permutation));
++        }
++        temp.add(new StringBuilder().append(currentCharacter));
++
++        return permutationsTillNow;
++    }
++}
+\ No newline at end of file
+diff --git a/to be committed/Subtree.java b/to be committed/Subtree.java
+new file mode 100644
+index 0000000..d93ec81
+--- /dev/null
++++ b/to be committed/Subtree.java	
+@@ -0,0 +1,49 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++public class Subtree {
++    public static void main(String[] args) {
++
++    }
++      /*      root          root1
++
++                 1            1
++               2   3        2   3
++              4 5 6 7      5 4 6  7
++
++       */
++    // find is root1 is subtree of root
++
++    private static boolean isSubtree(TreeNode root, TreeNode root1, TreeNode root1fixed) {
++        if (root == null && root1 == null) {
++            return true;
++        }
++
++        if (root == null || root1 == null) {
++            return false;
++        }
++
++//        if (isSame(root, root1)) {
++//            return true;
++//        }
++
++        if (root.val == root1.val) {
++            return isSubtree(root.left, root1.left, root1fixed) && isSubtree(root.right, root1.right, root1fixed);
++        } else {
++            return isSubtree(root.left, root1fixed, root1fixed) || isSubtree(root.right, root1fixed, root1fixed);
++        }
++    }
++
++    private static boolean isSame(TreeNode root, TreeNode root1) {
++        if (root == null && root1 == null) {
++            return true;
++        }
++
++        if (root == null || root1 == null) {
++            return false;
++        }
++
++        return root.val == root1.val
++                && isSame(root.left, root1.left)
++                && isSame(root.right, root1.right);
++    }
++}
+diff --git a/to be committed/WordLadderII.java b/to be committed/WordLadderII.java
+new file mode 100644
+index 0000000..42c78cf
+--- /dev/null
++++ b/to be committed/WordLadderII.java	
+@@ -0,0 +1,106 @@
++package com.mckinsey.engage.app.apis.mappings;
++
++import java.util.HashSet;
++import java.util.LinkedList;
++import java.util.List;
++import java.util.Set;
++
++public class WordLadderII {
++    public static void main(String[] args) {
++        Set dictionary = new HashSet<>();
++
++        String beginWord = "hit";
++        String endWord = "cog";
++
++//        beginWord = "hit";
++//        endWord = "cog";
++
++        dictionary.add("hot");
++        dictionary.add("dot");
++        dictionary.add("dog");
++        dictionary.add("lot");
++        dictionary.add("log");
++        dictionary.add(endWord);
++
++        Set<List<String>> result = new HashSet<>();
++        List<String> tempResult = new LinkedList<>();
++        Set<String> visited = new HashSet<>();
++        List<List<String>> finalResult = new LinkedList<>();
++
++        tempResult.add(beginWord);
++
++        allShortestTransformationSequences(beginWord, endWord, dictionary, result, tempResult, visited);
++        removeAllListFromResultWithDepthGreaterThanMinimum(result, finalResult);
++
++        //return finalResult;
++        System.out.println(finalResult);
++    }
++
++    private static void allShortestTransformationSequences(String start, String end, Set<String> dictionary,
++                                                           Set<List<String>> result, List<String> tempResult,
++                                                           Set<String> visited) {
++        if (start.equals(end)) {
++            List<String> tempList = new LinkedList<>();
++
++            for (String word : tempResult) {
++                tempList.add(word);
++            }
++
++            if (!result.contains(tempList)) {
++                result.add(tempList);
++            }
++        }
++
++        List<String> neighbours = getNeighbours(start, dictionary);
++
++        if (neighbours.size() != 0) {
++            for (String neighbour : neighbours) {
++                if (!visited.contains(neighbour)) {
++                    tempResult.add(neighbour);
++                    visited.add(neighbour);
++                    allShortestTransformationSequences(neighbour, end, dictionary, result, tempResult, visited);
++                    tempResult.remove(neighbour);
++                    visited.remove(neighbour);
++                }
++            }
++        }
++    }
++
++    private static void removeAllListFromResultWithDepthGreaterThanMinimum(Set<List<String>> result, List<List<String>> finalResult) {
++        int minimum = Integer.MAX_VALUE;
++
++        for (List<? extends String> list : result) {
++            if (list.size() < minimum) {
++                minimum = list.size();
++            }
++        }
++
++        for (List<String> list : result) {
++            if (list.size() == minimum) {
++                finalResult.add(list);
++            }
++        }
++    }
++
++    private static List<String> getNeighbours(String start, Set<String> dictionary) {
++        char[] chars = start.toCharArray();
++        List<String> result = new LinkedList<>();
++
++        for (char ch = 'a'; ch <= 'z'; ch++) {
++            for (int index = 0; index < chars.length; index++) {
++                if (ch != chars[index]) {
++                    char oldCh = chars[index];
++                    chars[index] = ch;
++
++                    String stringValueOfNewChars = String.valueOf(chars);
++
++                    if (dictionary.contains(stringValueOfNewChars)) {
++                        result.add(stringValueOfNewChars);
++                    }
++                    chars[index] = oldCh;
++                }
++            }
++        }
++        return result;
++    }
++}
+\ No newline at end of file
+-- 
+2.25.0
+
